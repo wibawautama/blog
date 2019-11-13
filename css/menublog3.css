@@ -1,0 +1,101 @@
+.tabs-inner .widget {}
+.tabs-inner .widget ul {
+list-style:none;
+padding:0px;
+margin-left:0px;
+}
+.tabs-inner .widget ul li {
+float:left;
+}
+.tabs-inner .widget ul a {
+text-decoration:none;
+line-height: 1.8em;
+
+}
+
+/*************************************************/
+
+.tabs-inner .widget { 
+padding:0px;
+margin-bottom:-20px!important;
+margin-top:0px!important;
+margin-left:-0px!important;
+margin-right:-0px!important;
+z-index:1000;
+}
+
+/*.mobile #HTML1 .widget-content{*/
+.mobile .tabs-inner .widget{
+position:relative;top:-15px!important;
+margin-left:0px!important;
+margin-bottom:-20px!important;
+}
+
+#toggle:checked{display:none;}
+#toggle:not(:checked){display:none;}
+.toggle {display:none;background: #cc6611 url(//www.blogblog.com/1kt/simple/gradients_light.png) repeat-x scroll 0 -435px;_background-image: none;
+color:white; text-align:center;font-weight:bold; cursor:pointer;padding:5px;
+font: normal normal Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+text-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
+}
+
+.tabs-inner .widget ul.egmenu { margin-top:-10px; }
+
+.tabs-inner .widget ul.egmenu ul { 
+position:absolute; /*supaya saat sub menu down, item li yang lain tidak bergeser ke kanan*/
+}
+
+.tabs-inner .widget ul.egmenu li { 
+padding:1px;
+}
+
+.tabs-inner .widget ul.egmenu a { 
+color:#cc6611;
+font-weight:bold;
+padding:10px;
+border:0;
+}
+
+.tabs-inner .widget ul.egmenu a:hover { 
+color:#fff;
+background:#cc6611;
+cursor:pointer;
+}
+
+.tabs-inner .widget ul.egmenu li ul{
+display:none; /*sub menu disappear*/
+z-index:1000;
+}
+
+.tabs-inner .widget ul.egmenu li:hover ul { 
+display:block; /* sub menu down*/
+}
+
+.tabs-inner .widget ul.egmenu li:hover ul li{ 
+float:none;
+width:100%;/*170px;*/  /*sub menu kolom*/
+}
+.tabs-inner .widget ul.egmenu li:hover ul li a{ 
+width:100%;  /*sub menu kolom*/
+}
+
+.tabs-inner .widget ul.egmenu span {
+font-weight:bold;
+color:black;
+padding:10px;
+display:block !important; /* supaya padding berlaku */
+}
+
+
+@media all and (max-width: 480px) {
+  .tabs-inner .widget ul.egmenu {  height: auto; }
+  .tabs-inner .widget ul.egmenu li { width: 100%; }
+  .tabs-inner .widget ul.egmenu a {/* width:100%;*/ display:block;}
+  .tabs-inner .widget ul.egmenu ul { position: relative;} 
+  .tabs-inner .widget ul.egmenu li.tap ul { display: block;}
+  .tabs-inner .widget ul.egmenu li:hover ul li { width:100%;}
+
+  .toggle {display:block;}
+  #toggle:checked ~  ul.egmenu {display:block;} 
+  #toggle:not(:checked)~ ul.egmenu{display:none;}
+  }
