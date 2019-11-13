@@ -1,0 +1,38 @@
+.clear{
+	clear: both;
+}
+
+.badan{
+    /*background: yellow;*/
+	/*height: 450px;*/
+}
+/*bagian sidebar*/
+.wrap .badan .sidebar{
+	/*background: orange;*/
+	float: left;	
+	width: 30%;
+	height: 100%;
+}
+
+/*akhir sidebar*/
+.wrap .badan .content{
+	/*background: red;*/
+	float: left;
+	height: 100%;
+	width: 70%;	
+}
+
+.wrap .footer{
+	background: orange;
+	width: 100%;
+}
+
+#kiri {width:40%; float:left;}
+#kanan {width:60%; float:left;}
+
+@media all and (max-width: 480px) {
+.wrap .badan .sidebar {width:100%; float:none;}
+.wrap .badan .content {width:100%; float:none;}
+#kiri {width:100%; float:none;}
+#kanan {width:100%; float:none;}
+}
