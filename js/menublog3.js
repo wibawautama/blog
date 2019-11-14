@@ -184,7 +184,7 @@ return retval;
 
 
 function stringMenu03(){
-var pil=0;
+var pil=1;
 var strProtocol=["file://", ""];  // "https://"];
 var strBaseAddr=["D:/DNLOADS/New folder/githubblog/", ""]; //"https://wibawautama.github.io/blog/"];
 
