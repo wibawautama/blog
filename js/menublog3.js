@@ -327,7 +327,7 @@ return st;
 function stringMenu03(){
 var pil=1;
 var strProtocol=["file://", ""]; // "https://"];
-var strBaseAddr=["D:/DNLOADS/New folder/githubblog/", "wibawautama.github.io/blog/"];
+var strBaseAddr=["D:/DNLOADS/New folder/githubblog/", ""]; //https://wibawautama.github.io/blog/"];
 
 var ar = new Array(
 strBaseAddr[pil], //"D:/DNLOADS/New folder/githubblog/" "https://wibawautama.github.io/blog/",
