@@ -34,7 +34,7 @@ var bb = document.createElement("br");
 div1.appendChild(bb);//<br>
 div0.appendChild(div1); //</div> <!--tab-inner-->
 obj.appendChild(div0);
-document.getElementById('blogmenu').innerHTML = stringMenu02();
+document.getElementById('blogmenu').innerHTML = stringMenu03();
 settap(); //fn7
 }
 
