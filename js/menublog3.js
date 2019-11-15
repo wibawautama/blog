@@ -186,10 +186,6 @@ return retval;
 function stringMenu03(){
 var pil=1;
 var arrBaseUrl = ["file:///D:/DNLOADS/New%20folder/githubblog/", "https://wibawautama.github.io/blog/"];
-var getUrl = window.location; //getUrl.protocol getUrl.host 
-var p = getUrl.pathname.lastIndexOf("/")+1;
-var baseUrl = getUrl.pathname.substr(0,p);
-console.log(baseUrl);
 var ar = new Array(
 "",
 "#",
@@ -236,8 +232,7 @@ var sr = new Array(
 //"Syair Empat Musim",
 //"Berat Tulang Spiritual",
 "@",
-"About" ,
-" "
+"About"
 //"Contact Us", 
 //"Privacy Policy"
 );
@@ -255,7 +250,7 @@ do{
 
     st = st + "<li><a href=\""+ arrBaseUrl[pil] + ar[i]+"\" >"+sr[i] + "</a></li>"; 
 	//target='target_iframe'
-	console.log("<li><a href=\""+ arrBaseUrl[pil] + ar[i]+"\" >"+sr[i] + "</a></li>");
+	//console.log("<li><a href=\""+ arrBaseUrl[pil] + ar[i]+"\" >"+sr[i] + "</a></li>");
 i++;
 } while (sr[i]!="@");
 st = st + "</ul>";
@@ -265,7 +260,7 @@ st = st + "</ul>";
    
   if (sr[i]!='@') {
         st = st + "<li><a href=\""+ arrBaseUrl[pil] +  (sr[i]=="Home"?"index.html":ar[i])+"\" >"+sr[i] + "</a></li>"; //target='target_iframe'
-	console.log("<li><a href=\""+ arrBaseUrl[pil] + (sr[i]=="Home"?"index.html":ar[i])+"\" >"+sr[i] + "</a></li>");
+	//console.log("<li><a href=\""+ arrBaseUrl[pil] + (sr[i]=="Home"?"index.html":ar[i])+"\" >"+sr[i] + "</a></li>");
 		}
 }//for
 
@@ -274,4 +269,6 @@ st = st + "</ul>";
 return st;
 
 }//funct
+
+
 
