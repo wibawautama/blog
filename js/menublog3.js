@@ -185,11 +185,13 @@ return retval;
 
 function stringMenu03(){
 var pil=1;
-var strProtocol=["file://", ""];  // "https://"];
-var strBaseAddr=["D:/DNLOADS/New folder/githubblog/", ""]; //"https://wibawautama.github.io/blog/"];
-
+var arrBaseUrl = ["file:///D:/DNLOADS/New%20folder/githubblog/", "https://wibawautama.github.io/blog/"];
+var getUrl = window.location; //getUrl.protocol getUrl.host 
+var p = getUrl.pathname.lastIndexOf("/")+1;
+var baseUrl = getUrl.pathname.substr(0,p);
+console.log(baseUrl);
 var ar = new Array(
-strBaseAddr[pil], //"D:/DNLOADS/New folder/githubblog/", ""; //"https://wibawautama.github.io/blog/",
+"",
 "#",
 "-",
 "post/HHST.html",
@@ -241,7 +243,7 @@ var sr = new Array(
 );
 
 var st="";
-var j = loc(ar);
+
 for (var i=0; i<sr.length; i++){
 
 if (sr[i]=="-"){
@@ -250,29 +252,21 @@ st = st + "<li> <a class='has_sub' onclick='void(0)'>" + sr[i] + "&#x25BC;</a>";
 st = st + "<ul>";
 i++;
 do{
-if (i==j)
-	st = st + "<li><span>"+sr[i] + "</span></li>";
-else {
-    st = st + "<li><a href=\""+strProtocol[pil]+ ar[0] + ar[i]+"\" >"+sr[i] + "</a></li>"; //target='target_iframe'
-}
+
+    st = st + "<li><a href=\""+ arrBaseUrl[pil] + ar[i]+"\" >"+sr[i] + "</a></li>"; 
+	//target='target_iframe'
+	console.log("<li><a href=\""+ arrBaseUrl[pil] + ar[i]+"\" >"+sr[i] + "</a></li>");
 i++;
 } while (sr[i]!="@");
 st = st + "</ul>";
 //i++;
 }//if
 
-if (i==j)
-st = st + "<li><span>"+sr[i] + "</span></li>";
-else {
-  if (i==0)
-   var slaman = strProtocol[pil];
-  else
-   var slaman = strProtocol[pil]+ ar[0];
    
-  if (sr[i]!='@') 
-  st = st + "<li><a href=\""+ slaman + ar[i] + (sr[i]=="Home"?"index.html":"")+"\" >"+sr[i] + "</a></li>"; //target='target_iframe'
-}
-
+  if (sr[i]!='@') {
+        st = st + "<li><a href=\""+ arrBaseUrl[pil] +  (sr[i]=="Home"?"index.html":ar[i])+"\" >"+sr[i] + "</a></li>"; //target='target_iframe'
+	console.log("<li><a href=\""+ arrBaseUrl[pil] + (sr[i]=="Home"?"index.html":ar[i])+"\" >"+sr[i] + "</a></li>");
+		}
 }//for
 
 
@@ -280,3 +274,4 @@ else {
 return st;
 
 }//funct
+
