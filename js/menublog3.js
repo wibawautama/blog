@@ -1,9 +1,25 @@
 function disqusThread(){
+if (window.location.protocol=="https:" || window.location.protocol=="http:"){
+var wrapdiv = document.getElementById('wrp');
+var disqusdiv = document.createElement("div");
+disqusdiv.setAttribute("id", "disqus_thread");
+//disqusdiv.setAttribute("style", "background-color:yellow;border:1px solid black");
+//var txt = document.createTextNode("Disquss Thread");
+//disqusdiv.appendChild(txt);
+wrapdiv.parentNode.insertBefore(disqusdiv, wrapdiv.nextSibling)
+
+var text = document.createTextNode("Please enable JavaScript to view the comments powered by Disqus.");
+var noscr = document.createElement("noscript");
+noscr.appendChild(text);
+var dthread = document.getElementById("disqus_thread");
+dthread.parentNode.insertBefore(noscr, dthread.nextSibling)
+
 var d = document, s = d.createElement('script');
 s.src = 'https://wibawautama-github-io-blog.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-}
+(d.head || d.body).appendChild(s);	
+}//if	
+}//function
 
 function startUp(){
 var div0 = document.createElement("div");
@@ -46,23 +62,7 @@ var smenu = stringMenu03();
 document.getElementById('blogmenu').innerHTML = smenu;
 settap(); //fn7
 document.getElementById('side').innerHTML = "<ul style='list-style:none;margin:0;padding:0;line-height:24px;'>" + smenu+ "</ul>";
-
-if (window.location.protocol=="https:" || window.location.protocol=="http:"){
-var wrapdiv = document.getElementById('wrp');
-var disqusdiv = document.createElement("div");
-disqusdiv.setAttribute("id", "disqus_thread");
-disqusdiv.setAttribute("style", "background-color:yellow;border:1px solid black");
-var txt = document.createTextNode("Disquss Thread");
-disqusdiv.appendChild(txt);
-wrapdiv.parentNode.insertBefore(disqusdiv, wrapdiv.nextSibling)
-
-var text = document.createTextNode("Please enable JavaScript to view the comments powered by Disqus.");
-var noscr = document.createElement("noscript");
-noscr.appendChild(text);
-var dthread = document.getElementById("disqus_thread");
-dthread.parentNode.insertBefore(noscr, dthread.nextSibling)
-disqusThread();
-}//if
+//disqusThread();
 }//function startUp
 
 function addClass(element, classToAdd) { 
