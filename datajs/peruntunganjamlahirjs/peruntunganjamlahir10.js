@@ -1,0 +1,5 @@
+function peruntunganjamlahir10() {
+  calculatefor_PERUNTUNGANJAMLAHIR("-YANG LAHIR PADA WAKTU/JAM RANGKAP ‘YU SIE (AYAM)’ JAM 17.00 SAMPAI JAM 19.00 MAGRIB :\nMereka yang dilahirkan pada waktu rangkap ini, pada umumnya agak menderita semasa kecilnya. Saudara kandung saling terpisah berpencar dan jarang memperoleh kesempatan untuk dirawat maupun ditunggui orang tua sampai anak-anaknya  'jadi orang'. Lebih banyak anak laki-laki daripada anak perempuan.\nKaum wanitanya sering berganti pasangan, keras dan kokoh pada prinsip hidup, serakah, dan tak mau kalah dalam soal apapun. Sebaiknya meninggalkan kampung halaman, untuk membangun usaha dan karir di negeri orang, kemungkinan bisa memperoleh keberuntungan yang jauh lebih bagus.\nKehidupan rumah tangga kurang harmonis, tak mungkin memperoleh ketentraman.\nUSAHA/KARIR YANG COCOK : Ahli Kimia, Wartawan, Guru, idang Kesenian.\nUSAHA YANG TIDAK COCOK : Jual Beli Tanah.\nUMUR YANG KURANG BAIK (harus hati-hati karena sedang naas) ; 19 tahun, 25 tahun, 32 tahun, 49 tahun, dan 78 tahun."
+);
+}
+recalculate_PERUNTUNGANJAMLAHIR();

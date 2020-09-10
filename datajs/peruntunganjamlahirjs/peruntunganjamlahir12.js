@@ -1,0 +1,5 @@
+function peruntunganjamlahir12() {
+  calculatefor_PERUNTUNGANJAMLAHIR("-YANG LAHIR PADA WAKTU/JAM RANGKAP 'HAY SIE (BABI)‘ JAM 21.00 SAMPAI JAM 23.00 LARUT MALAM :\nMereka yang dilahirkan pada waktu rangkap diatas pada umumnya cukup cerdas, tapi kurang memiliki kesabaran. Memiliki pendirian sangat kuat, cenderung kepala batu dan sulit dinasehati. Senang dan sering membantu orang yang sedang dalam kesulitan. Sifatnya sangat jujur. Berbakat dibidang kerajinan tangan.\nKaum wanitanya keras luarnya tapi lembut hatinya. Mudah tersinggung, namun mau  menyelami persoalan dan perasaan orang lain, bila dijelaskan secara sabar. Rajin dan wataknya mulia, cukup besar hokkienya (rejekinya).\nUSAHA/KARIR YANG COCOK : Dokter Kulit dan Kelamin, Pengusaha Hotel, Pendeta, Menjual barang-barang kesenian, Jual Barang Antik, Jual Beli Emas.\nUSAHA YANG TIDAK COCOK : Yang ada hubungannya dengan API.\nUSIA YANG KURANG BAIK (harus hati-hati karena sedang naas):  26 tahun, 36 tahun,  39 tahun, 49 tahun, 56 tahun dan 78 tahun."
+);
+}
+recalculate_PERUNTUNGANJAMLAHIR();
