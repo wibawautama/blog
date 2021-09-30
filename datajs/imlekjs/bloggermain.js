@@ -113,8 +113,8 @@ var g=document.getElementById("blogMenu");
 fn1(g,"click",openNav);
 setAccordion();    
 
-if (s.indexOf(".html")==-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
-//if(s=="/" || blogpatt.test(s)|| s==sf01){
+//if (s.indexOf(".html")==-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
+if(s=="/" || blogpatt.test(s) || s==sf01){
 addArrow();
 legacyStartUp();
 
