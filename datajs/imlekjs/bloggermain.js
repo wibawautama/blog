@@ -63,7 +63,8 @@ var sf02="/storage/emulated/0/Documents/WNLI/BlogBaliMockup/BlogImlekSavePageAs/
 
 function onoffContent(sid, funcvar){
 var s=location.pathname;
-if (s=="/" || blogpatt.test(s) || s==sf01)
+if (s.indexOf(".html")==-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
+//if (s=="/" || blogpatt.test(s) || s==sf01)
 document.getElementById(sid).style.display="none";
 else{
 
@@ -105,14 +106,15 @@ pt[i].appendChild(el);
 
 
 function StartUp(){
-var sp = location.pathname;
+var s = location.pathname;
 document.body.className=" mobile";
 window.onresize = function(){alignNav();};
 var g=document.getElementById("blogMenu");
 fn1(g,"click",openNav);
 setAccordion();    
 
-if(sp=="/" || blogpatt.test(sp)|| sp==sf01){
+if (s.indexOf(".html")==-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
+//if(s=="/" || blogpatt.test(s)|| s==sf01){
 addArrow();
 legacyStartUp();
 
