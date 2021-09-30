@@ -63,8 +63,8 @@ var sf02="/storage/emulated/0/Documents/WNLI/BlogBaliMockup/BlogImlekSavePageAs/
 
 function onoffContent(sid, funcvar){
 var s=location.pathname;
-if (s.indexOf(".html")!=-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
-//if (s=="/" || blogpatt.test(s) || s==sf01)
+//if (s.indexOf(".html")!=-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
+if (s=="/" || blogpatt.test(s) || s==sf01)
 document.getElementById(sid).style.display="none";
 else{
 
@@ -113,7 +113,7 @@ var g=document.getElementById("blogMenu");
 fn1(g,"click",openNav);
 setAccordion();    
 
-if (s.indexOf(".html")!=-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
+if (s.indexOf(".html")==-1 && ( s=="/" || blogpatt.test(s) || s==sf01 ))
 //if(s=="/" || blogpatt.test(s)|| s==sf01){
 addArrow();
 legacyStartUp();
