@@ -67,14 +67,15 @@ function onoffContent(sid, funcvar){
 var refpatt = new RegExp("(\/search\/label\/)|(\/([0-9][0-9][0-9][0-9])\/([01][0-9])\/)");
 var s=location.pathname;
 var h=location.href;
-var r=document.referer;
+var r=document.referrer;
 var bHide=false;
 console.log("pathnmae="+s);
 console.log("href="+h);
 console.log("ref="+r);
 
 if(s=="/" || s==sf01){
-console.log("1.Hide="+bHide);bHide=true;
+bHide=true;
+console.log("1.Hide="+bHide);
 } 
 else if(refpatt.test(r) && h.indexOf('.html')==-1){
 console.log("b1="+refpatt.test(r));
