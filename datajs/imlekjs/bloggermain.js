@@ -130,7 +130,7 @@ return "";
 }
 
 function putSnippet(tag){
-setCookies("prevUrl", tag, 1);
+setCookie("prevUrl", tag, 1);
 }
 
 function StartUp(){
