@@ -84,7 +84,7 @@ document.getElementById(sid).style.display="none";
 document.getElementById(sid).style.display="block"; 
 funcvar();
 }  
-putSnippet("");
+//putSnippet("");
 }//funct  
 
 /*
