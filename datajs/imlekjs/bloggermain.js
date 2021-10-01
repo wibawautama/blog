@@ -165,7 +165,7 @@ spa[0].setAttribute("style", "position:relative;top:-10px;margin:0px!important;p
 
 var pt = document.getElementsByClassName("post-title");
 for(var i=0; i<pt.length; i++){
-pt[i].setAttribute("style", "text-align:center!important;font-size:150%!important;");
+pt[i].setAttribute("style", "text-align:left!important;font-size:150%!important;");
 }//for	
 
 var pf = document.getElementsByClassName("post-footer");
