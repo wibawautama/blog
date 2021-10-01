@@ -143,7 +143,7 @@ var ul = lblLists[0].getElementsByTagName("ul");
 var li = ul[0].getElementsByTagName("li");
 for(var i=0; i<li.length; i++){
 var aa = li[i].getElementsByTagName("a");
-if(aa){
+if(aa[0]){
 var txt  =  aa[0].innerText;
 var dir  =  aa[0].dir;
 var href =  aa[0].href;
