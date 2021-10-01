@@ -77,7 +77,7 @@ if(s=="/" || s==sf01){
 bHide=true;
 console.log("1.Hide="+bHide);
 } 
-else if(refpatt.test(s) && s.indexOf('.html')==-1){
+if(refpatt.test(s) && s.indexOf('.html')==-1){
 console.log("b1="+refpatt.test(r));
 console.log("b2="+(h.indexOf('.html')==-1));
 console.log("2.Hide="+bHide);
