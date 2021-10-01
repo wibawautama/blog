@@ -81,10 +81,15 @@ bHide=true;
 if(s.indexOf(".html")!=-1){
 bHide=false; 
 console.log("3.bHide="+bHide);
-}
+var pt = document.getElementsByClassName("post-title");
+for(var i=0; i<pt.length; i++){
+pt[i].setAttribute("style", "text-align:center!important;font-size:150%!important;");
+}//for	
+}//if
 
 if (bHide){
 document.getElementById(sid).style.display="none";
+addArrow();
 }else{
 document.getElementById(sid).style.display="block"; 
 funcvar();
