@@ -63,14 +63,16 @@ var sf01="/D:/WNLI/Blog/BlogBaliMockup/BlogImlekSavePageAs/Kalender%20Saka%20Bal
 var sf02="/storage/emulated/0/Documents/WNLI/BlogBaliMockup/BlogImlekSavePageAs/Kalender%20Saka%20Bali.html";
 
 function onoffContent(sid, funcvar){
-console.log(gSnippet);
+var prevPage = getCookie("prevUrl"); 
+console.log(prevPage);
+
 var s=location.pathname;
 var bHide=false;
 if(s=="/" || s==sf01){
 bHide=true;
 console.log("1.bHide="+bHide);
 } 
-if(gSnippet=="Labels" || gSnippet=="Archives"){
+if(prevPage=="Labels" || prevPage=="Archives"){
 bHide=true;
 console.log("2.bHide="+bHide);
 bHide=true;
@@ -82,7 +84,8 @@ document.getElementById(sid).style.display="none";
 document.getElementById(sid).style.display="block"; 
 funcvar();
 }  
-}  
+putSnippet("");
+}//funct  
 
 /*
 h3.post-title{margin-top:0!important;}
@@ -102,6 +105,33 @@ pt[i].appendChild(el);
 }//for		
 }//func
 
+
+function setCookie(cname, cvalue, exdays){
+var d = new Date();
+d.setTime(d.getTime() + (exdays*24*3600*1000));
+var expires = "expire=" + d.toUTCString();
+document.cookie = cname + "="+cvalue+";"+expires+";path=/";
+}
+
+function getCookie(cname){
+var name = cname + "=";
+var sp= decodeURIComponent(document.cookie);
+var ca = sp.split(';');
+for(var i=0; i<ca.length; i++){
+var c=ca[i];
+while(c.charAt(0)==' '){
+c=c.substring(1);
+}
+if (c.indexOf(name)==0){
+return c.substring(name.length, c.length);
+}//if
+}//for
+return "";
+}
+
+function putSnippet(tag){
+setCookies("prevUrl", tag, 1);
+}
 
 function StartUp(){
 var s = location.pathname;
@@ -139,7 +169,7 @@ pf[i].setAttribute("style", "margin:20px 0px 0px -8px!important;font-size:120%!i
 
 var lblLists = document.getElementsByClassName("list-label-widget-content"); 
 var ul = lblLists[0].getElementsByTagName("ul");
-//for(var i=0; i<ul.length; i++){}
+//for(var i=0; i<ul.length; i++){karena cuma ada satu anggota}
 var li = ul[0].getElementsByTagName("li");
 for(var i=0; i<li.length; i++){
 var aa = li[i].getElementsByTagName("a");
@@ -150,11 +180,11 @@ var href =  aa[0].href;
 console.log(txt+"-"+ dir +"-"+href);
 var ela = document.createElement('a');
 ela.setAttribute("dir", dir);
-ela.setAttribute("href", "javascript:gSnippet='Labels';location.href='"+href+"'");
+ela.setAttribute("href", "javascript:putSnippet('Labels');location.href='"+href+"'");
 ela.appendChild(document.createTextNode(txt));
 li[i].replaceChild(ela, aa[0]);
 }
 }
 
-
 }//funct
+
