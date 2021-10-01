@@ -78,13 +78,18 @@ console.log("2.bHide="+bHide);
 bHide=true;
 }
 
+if(s.indexOf(".html")!=-1){
+bHide=false; 
+console.log("3.bHide="+bHide);
+}
+
 if (bHide){
 document.getElementById(sid).style.display="none";
 }else{
 document.getElementById(sid).style.display="block"; 
 funcvar();
 }  
-//putSnippet("");
+
 }//funct  
 
 /*
