@@ -161,6 +161,9 @@ spa[0].setAttribute("style", "position:relative;top:-10px;margin:0px!important;p
 
 var pt = document.getElementsByClassName("post-title");
 for(var i=0; i<pt.length; i++){
+if(s.indexOf("/search/label/")!=-1)
+pt[i].setAttribute("style", "text-align:left;font-size:150%!important;");
+else
 pt[i].setAttribute("style", "text-align:center;font-size:150%!important;");
 }//for	
 
