@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+</head>
+<body>
+<div id="kenanga"></div>
+<button onclick="download()">DOWNLOAD!</button>
+<script type="text/javascript">
+function download(){
+    var ifrm = document.createElement("iframe");
+    ifrm.src = "datajs/imlekjs/ImlekApp.apk";
+    ifrm.style.display="none";
+    document.getElementById('kenanga').appendChild(ifrm);
+}
+</script>
+</body>
+</html>
+
